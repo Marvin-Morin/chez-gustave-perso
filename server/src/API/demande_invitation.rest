@@ -1,0 +1,10 @@
+### Enpoint pour envoyer une demande de parrainage à un admin
+POST http://localhost:3000/demande-invitation
+Content-Type: application/json
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZjgxOThhODUxNWEwZGYyYTMzZDVmNiIsImVtYWlsIjoibWFydmluLm1hbG91aW5AZ21haWwuY29tIiwibmFtZSI6Ik1hcnZpbiBNb3JpbiIsInRlbCI6IjAxMjM0NTY3ODkiLCJpc19hZG1pbiI6dHJ1ZSwicmVzZXJ2YXRpb25zIjpbXSwiX192IjozNX0sImlhdCI6MTcxODY5ODc3NX0.ga9e32AHwbzk6nyh6S01X2fXU1y6DIeorFgQJfH10KQ; Domain=localhost; Path=/; HttpOnly; Secure; SameSite=None
+
+{
+  "name": "Morin Marvin",
+  "email": "marvin.malouin@gmail.com",
+  "tel": "123456789"
+}

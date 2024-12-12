@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajouter logement</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/ajouter_logement.css">
+</head>
+
+<body>
+
+  <!-- GIF de chargement
+     <div id="loading">
+        <img src="./ressources/loading/Ball@1x-1.0s-200px-200px.gif" alt="Loading..." />
+    </div> -->
+
+  <header>
+    <nav>
+      <!-- Button for opened and closed menu  -->
+      <!-- Bouton pour ovrir et fermer le menu -->
+      <div id="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <a class="logo_nav" href="./index.html"><img src="./ressources/logo/lesvacanceschezgustave - logo.png"
+          alt="logo chez gustave"></a>
+      <!-- Liste to the navbar -->
+      <!-- Liste de la barre de navigation -->
+      <ul>
+        <a href="./parrainage.html" id="parrainage">
+          <li>Parrainage</li>
+        </a>
+        <a href="./invitation.html" id="invitation">
+          <li>Invitation</li>
+        </a>
+        <a href="./reservation.html" id="reservation">
+          <li>Mes réservation</li>
+        </a>
+        <a href="#" id="logoutButton">
+          <li>Déconnexion</li>
+        </a>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Ajouter un Logement</h1>
+  <form id="logement-form">
+    <label for="images">Images:</label>
+    <input type="file" id="images" multiple>
+    <button type="button" id="add-image">Ajouter Image</button>
+    <div id="images-list"></div>
+
+    <label for="secteur">Secteur:</label>
+    <input type="text" id="secteur" name="secteur" required><br>
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" required></textarea><br>
+
+    <label for="tarif_bas">Tarif Bas:</label>
+    <input type="number" id="tarif_bas" name="tarif_bas" required><br>
+
+    <label for="tarif_moyen">Tarif Moyen:</label>
+    <input type="number" id="tarif_moyen" name="tarif_moyen" required><br>
+
+    <label for="tarif_haut">Tarif Haut:</label>
+    <input type="number" id="tarif_haut" name="tarif_haut" required><br>
+
+    <label for="m_carre">Surface (m²):</label>
+    <input type="number" id="m_carre" name="m_carre" required><br>
+
+    <label for="chambre">Chambre:</label>
+    <input type="number" id="chambre" name="chambre" required><br>
+
+    <label for="salle_de_bain">Salle de Bain:</label>
+    <input type="number" id="salle_de_bain" name="salle_de_bain" required><br>
+
+    <label for="categorie">Catégorie:</label>
+    <input type="text" id="categorie" name="categorie" required><br>
+
+    <label for="type">Type:</label>
+    <select id="type" name="type" required>
+      <option value="" disabled selected>Sélectionnez un type</option>
+    </select><br>
+
+    <label for="equipements">Équipements:</label>
+    <div id="equipements-list"></div><br>
+
+    <label for="adulte">Adultes:</label>
+    <input type="number" id="adulte" name="adulte" required><br>
+
+    <label for="enfant">Enfants:</label>
+    <input type="number" id="enfant" name="enfant" required><br>
+
+    <label for="animaux">Animaux:</label>
+    <input type="number" id="animaux" name="animaux" required><br>
+
+    <button type="submit">Ajouter Logement</button>
+    <button type="button" id="reset-form">Effacer</button>
+  </form>
+
+  <script type="module" src="./JS/ajouter_logement.js"></script>
+</body>
+
+</html>

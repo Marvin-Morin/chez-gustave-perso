@@ -1,0 +1,77 @@
+/* Reset des marges et des paddings pour la stabilité */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #c82333;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 10px;
+    text-transform: uppercase;
+    margin-top: 40vh;
+}
+
+/* Style de base pour le conteneur des informations de réservation */
+.reservationInfo {
+   display: block !important;
+    position: relative;
+    margin: 50px auto; /* Marge autour du conteneur */
+    padding: 20px; /* Espacement interne */
+    background-color: #f8f9fa; /* Couleur de fond */
+    border: 1px solid #ced4da; /* Bordure */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    max-width: 700px; /* Largeur maximale */
+    height: 600px;
+    overflow-y: scroll;
+}
+
+/* Style pour les titres des informations */
+.reservationInfo p {
+    margin-bottom: 10px; /* Espacement entre les paragraphes */
+    font-size: 16px; /* Taille de police */
+    line-height: 1.6; /* Hauteur de ligne */
+}
+
+/* Style spécifique pour les éléments en gras */
+.reservationInfo strong {
+    font-weight: bold; /* Texte en gras */
+    color: #155b55; /* Couleur du texte */
+}
+
+/* Style pour le bouton Supprimer */
+.button_supprimer {
+    display: block;
+    margin: 20px auto 0px auto;
+    bottom: 20px;
+    padding: 10px; /* Espacement intérieur du bouton */
+    background-color: #dc3545; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    border: none; /* Suppression de la bordure */
+    border-radius: 4px; /* Coins arrondis */
+    cursor: pointer; /* Curseur de type pointer au survol */
+    transition: background-color 0.3s ease; /* Transition douce pour la couleur de fond */
+}
+
+/* Style pour le bouton Supprimer au survol */
+.button_supprimer:hover {
+    background-color: #c82333; /* Couleur de fond plus foncée au survol */
+}
+
+.logement_reservation {
+    position: relative;
+    height: 100%;
+    border: 1px solid white;
+    padding: 10px;
+}
+
+.reservationInfo h3 {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+

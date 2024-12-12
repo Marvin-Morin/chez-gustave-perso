@@ -1,0 +1,15 @@
+POST http://localhost:3000/type
+Content-Type: application/json
+
+{
+  "tag": "Appartement"
+}
+
+
+### Enpoint pour récupérer tout les type
+GET http://localhost:3000/type
+
+
+
+### Enpoint pour récupérer un type par son id
+GET http://localhost:3000/type/65e6f9f99a93ec5cec4c9089

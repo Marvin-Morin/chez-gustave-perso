@@ -1,0 +1,63 @@
+### Créer une nouvelle note
+POST http://localhost:3000/rating
+Content-Type: application/json
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZTcyNGM5NzI1NjdkZDBlMWEyOWI0NCIsImVtYWlsIjoibm91dmVsdXRpbGlzYXRldXJAZXhhbXBsZS5jb20iLCJuYW1lIjoiTm91dmVsIFV0aWxpc2F0ZXVyIiwidGVsIjoiMDEyMzQ1Njc4OSIsInBhc3N3b3JkIjoiJDJiJDEwJG9HdWpPZGZWa2NUWE9heDhiVGkvSmV1Ni9vdUl4WnZubkIyUVl3VzJpLjd5ZlpiaDAuNzFTIiwiaXNfYWRtaW4iOnRydWUsInJlc2VydmF0aW9ucyI6WyI2NWU3MjUwZDcyNTY3ZGQwZTFhMjliNGMiXSwiX192IjoxfSwiaWF0IjoxNzA5NjQ4MDQ0fQ._nMaBKiVsCNHMeiONTz4c4DfP_8QUUaHrxf178lXkAs; Path=/; HttpOnly
+
+{
+  "rated": 5,
+  "text": "Excellent service !",
+  "logement": "65e724e372567dd0e1a29b47",
+  "reservation": "65e7250d72567dd0e1a29b4c"
+}
+
+
+
+
+### Enpoint pour récupérer toutes les notes
+GET http://localhost:3000/rating
+Content-Type: application/json
+
+
+
+
+### Enpoint pour modifier une note avec son id
+PUT http://localhost:3000/rating/65e72a1bb18fd1610633af36
+Content-Type: application/json
+
+{
+    "rated": 4, 
+    "text": "Très bien !" 
+}
+
+
+
+
+### Enpoint pour mettre à jours toutes les notes
+PUT http://localhost:3000/rating
+Content-Type: application/json
+
+{
+    "rated": 3, 
+    "text": "Bien."
+}
+
+
+
+
+
+### Enpoint pour supprimer une note par son ID
+DELETE http://localhost:3000/rating/65df3193bde68e2f229a53b5
+
+
+
+
+
+### Enpoint pour supprimer toutes les notes
+DELETE http://localhost:3000/rating
+
+
+
+
+
+### Enpoint pour récupérer les informations d'une note avec son id
+GET http://localhost:3000/rating/65e72a1bb18fd1610633af36

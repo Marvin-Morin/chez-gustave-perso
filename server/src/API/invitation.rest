@@ -1,0 +1,16 @@
+### Enpoint pour ajouter une invitation
+POST http://localhost:3000/invitation
+Content-Type: application/json
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZjgxOThhODUxNWEwZGYyYTMzZDVmNiIsImVtYWlsIjoibWFydmluLm1hbG91aW5AZ21haWwuY29tIiwibmFtZSI6Ik1hcnZpbiBNb3JpbiIsInRlbCI6IjAxMjM0NTY3ODkiLCJpc19hZG1pbiI6dHJ1ZSwicmVzZXJ2YXRpb25zIjpbXSwiX192IjozNX0sImlhdCI6MTcxODY5ODA0M30.qGqW835LndZah8ekLcx0DHsickCe-SmGXSmi5t8Ouq0; Domain=localhost; Path=/; HttpOnly; Secure; SameSite=None
+
+{
+  "email": "marvin.morin@institutsolacroup.com",
+  "message": "Rejoins-nous sur notre plateforme !"
+}
+
+
+
+
+
+### Enpoint pour supprimer toutes les invitations
+DELETE http://localhost:3000/invitation

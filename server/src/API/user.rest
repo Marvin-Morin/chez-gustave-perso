@@ -1,0 +1,91 @@
+### Endpoint pour la Création d'un utilisateur
+### Enpoint for user create
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+  "email": "marvin.malouin@gmail.com",
+  "name": "Marvin Morin",
+  "tel": "0123456789",
+  "password": "12345",
+  "is_admin": true
+}
+
+
+
+
+
+### Endpoint pour Obtenir tous les utilisateurs
+GET http://localhost:3000/user
+
+
+
+
+
+### Endpoint pour Supprimer un utilisateur par son id
+DELETE http://localhost:3000/user/65eacaaa7f739ecf1539d7b1
+
+
+
+
+
+### Endpoint pour Rechercher un utilisateur via son id (Récupérer les détails du user)
+GET http://localhost:3000/user/65f8198a8515a0df2a33d5f6
+
+
+
+
+
+### Endpoint pour Modifier les informations d'un utilisateur par son id
+PUT http://localhost:3000/user/65eacaaa7f739ecf1539d7b1
+Content-Type: application/json
+
+  {
+  
+  "name": "Marvin Morin",
+  "tel": "0123456789",
+  "password": "fsUTdur461",
+  "is_admin": true
+  }
+
+
+
+
+
+### Endpoint pour la connexion d'un utilisateur 
+POST http://localhost:3000/auth
+Content-Type: application/json
+
+{
+  "email": "marvin.malouin@gmail.com",
+  "password": "12345"
+}
+
+
+
+
+
+
+### Endpoint pour récupérer les informations d'un utilisateur connecté
+GET http://localhost:3000/auth/get-logged-in-user
+
+
+
+
+
+### Endpoint pour deconnecter un user
+GET http://localhost:3000/auth/logout
+
+
+
+
+
+### Enpoint pour récupérer la / les réservation(s) d'un user
+GET http://localhost:3000/user/65f8198a8515a0df2a33d5f6/reservation
+
+
+
+
+
+### Enpoint pour supprimer la / les réservation(s) d'un user
+DELETE http://localhost:3000/user/65f8198a8515a0df2a33d5f6/reservation

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parrainage</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/parrainage.css">
+</head>
+
+<body>
+
+     <!-- GIF de chargement -->
+     <div id="loading">
+        <img src="./ressources/loading/Ball@1x-1.0s-200px-200px.gif" alt="Loading..." />
+    </div>
+    
+    <header>
+        <nav>
+            <!-- Button for opened and closed menu  -->
+            <!-- Bouton pour ovrir et fermer le menu -->
+            <div id="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <a class="logo_nav" href="./index.html"><img src="./ressources/logo/lesvacanceschezgustave - logo.png"
+                    alt="logo chez gustave"></a>
+            <!-- Liste to the navbar -->
+            <!-- Liste de la barre de navigation -->
+            <ul>
+                <a href="./invitation.html" id="invitation">
+                    <li>Invitation</li>
+                  </a>
+                <a href="./reservation.html" id="reservation">
+                    <li>Mes réservation</li>
+                </a>
+                <a href="./ajouter_logement.html" id="ajouter_logement">
+                    <li>Ajouter logement</li>
+                  </a>
+                <a href="#" id="logoutButton">
+                    <li>Déconnexion</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Entrez les coordonnées de la personne à inviter à rejoindre le site :</h1>
+    <div id="invitation-form-container">
+        <form id="invitationForm" class="styled-form">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-mail :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="tel">Téléphone :</label>
+            <input type="tel" id="tel" name="tel" required>
+
+            <button type="submit">Envoyer la demande</button>
+        </form>
+        <div id="formMessage"></div>
+    </div>
+    <p>*Votre demande seras traité par un administrateur dans les plus bref délais.</p>
+
+<script type="module" src="./JS/parrainage.js"></script>
+<script type="module" src="./JS/index.js"></script>
+</body>
+
+</html>

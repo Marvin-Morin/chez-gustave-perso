@@ -1,0 +1,68 @@
+h1 {
+    margin: 50px auto;
+    width: 500px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#invitation-form-container {
+    width: 500px;
+    height: auto;
+    margin-top: auto;
+}
+
+#invitationForm {
+    width: 60%;
+}
+
+#formMessage {
+    margin: 20px auto;
+    font-size: 16px;
+    width: 500px;
+}
+
+.success {
+    color: green;
+}
+
+#formMessage.error {
+    color: red;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+}
+
+p {
+    width: 350px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+label {
+    color: #155b55;
+    margin-top: 15px;
+}
+
+input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #155b55;
+}
+
+.success {
+    background: #000;
+    padding: 10px;
+    margin: auto;
+    width: 320px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+textarea {
+    resize:vertical;
+    min-width: 90%;
+    min-height: 10px;
+    padding: 10px;
+}

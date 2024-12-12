@@ -1,0 +1,54 @@
+# Ignorer les fichiers Node.js
+node_modules/
+package-lock.json
+yarn.lock
+
+# Fichiers d'environnement
+.env
+.env.*
+
+# Dossier de build
+dist/
+build/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Système d'exploitation
+.DS_Store
+Thumbs.db
+
+# IDE/Éditeurs de texte
+.vscode/
+.idea/
+*.swp
+
+# Fichiers temporaires ou générés
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+
+# Caches
+.cache/
+.pnp/
+.pnp.js
+
+# Fichiers de déploiement
+*.gz
+*.zip
+*.tar
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Fichiers spécifiques au backend
+package.json
+backend/
+*.lock
