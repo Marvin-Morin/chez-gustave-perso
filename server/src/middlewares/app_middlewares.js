@@ -14,19 +14,29 @@ require('dotenv').config();
 
 
 
+// Configuration du middleware express-session dans l'application Express
+// Middleware pour la session
+// const session_middleware = express_session({
+//     secret: process.env.SECRET_KEY,
+//     resave: false,
+//     saveUninitialized: false,
+//     cookie: {
+//       secure: false,
+//       sameSite: 'None',
+//     },
+//   });
 
 // Configuration du middleware express-session dans l'application Express
 // Middleware pour la session
 const session_middleware = express_session({
-    secret: process.env.SECRET_KEY,
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-      secure: true,
-      sameSite: 'None',
-    },
-  });
-
+  secret: process.env.SECRET_KEY,
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    secure: true,
+    sameSite: 'None',
+  },
+});
 
 // Configuration du middleware cookie-parser
 // Middleware pour le cookie

@@ -1,10 +1,13 @@
 const jwt = require('jsonwebtoken');
-
+require('dotenv').config();
 
 
 exports.auth_middleware = (req, res, next) => {
+
   // Vérifier si le cookie contient le token
-  const { token } = req.cookies;
+  const token  = req.cookies.token;
+  console.log('token in middleware : ', token);
+  
 
   if (!token) {
     return res.status(401).json({ message: 'Accès non autorisé - Token manquant' });

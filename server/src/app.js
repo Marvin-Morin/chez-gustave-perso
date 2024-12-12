@@ -12,22 +12,16 @@ const jwt = require('jsonwebtoken');
 const { session_middleware, cookie_parser_middleware, body_parser_middleware } = require('./middlewares/app_middlewares');
 // Importation du module cors
 const cors = require('cors');
-require('dotenv').config();
-
+require('dotenv').config()
 
 
 // Création d'une nouvelle instance de l'application Express
 const app = express();
 
-// Utilisation des middlewares
-app.use(body_parser_middleware);
-app.use(cookie_parser_middleware);
-app.use(session_middleware);
-
 
 // Utilisation du middleware CORS
 app.use(cors({
-    origin: process.env.FRONT_URL,
+    origin: 'http://127.0.0.1:5501', 
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Méthodes autorisées
     allowedHeaders: ['Content-Type', 'Authorization'], // En-têtes autorisés
     credentials: true, // Autoriser l'envoi de cookies via des requêtes CORS
@@ -36,12 +30,10 @@ app.use(cors({
 
 
 
-// Configurer EJS comme moteur de template
-app.set('view engine', 'ejs');
-
-
-
-
+// Utilisation des middlewares
+app.use(body_parser_middleware);
+app.use(cookie_parser_middleware);
+app.use(session_middleware);
 
 
 
@@ -58,6 +50,7 @@ app.use('/', routes);
 // Décoder le token dans le cookie à l'aide de JWT
 app.use((req, res, next) => {
     const token = req.cookies.token;
+    console.log('token : ' + token);
     if (token) {
         try {
             const decoded = jwt.verify(token, process.env.SECRET_KEY);
@@ -70,7 +63,6 @@ app.use((req, res, next) => {
     }
     next();
 });
-
 
 
 

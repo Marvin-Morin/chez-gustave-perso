@@ -11,6 +11,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
       headers: {
         "Content-Type": "application/json",
       },
+      
       body: JSON.stringify({ email, password }),
       credentials: "include", // Envoyer les cookies avec la requête
     });
@@ -27,12 +28,12 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     errorMessage.textContent = "Erreur lors de la connexion";
     console.error("Erreur:", error);
   }
- 
+
     attendre();
 });
 
 const attendre = () => {
   setTimeout(() => {
-    window.location.href = "http://127.0.0.1:5500/client/index.html";
+    window.location.href = "http://127.0.0.1:5501/client/index.html";
   }, 500);
 }

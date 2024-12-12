@@ -3,7 +3,7 @@
 import { updateNav } from './nav.js';
 import { reservation_user } from './reservation.js';
 import { logement } from './index.js'
-import { invitation }  from './invitation.js'
+import { invitation } from './invitation.js'
 
 let fetchingUserInfo = false;
 
@@ -17,11 +17,10 @@ export async function getUserInfo() {
     try {
         const response = await fetch("http://localhost:3000/auth/get-logged-in-user", {
             method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            credentials: "include", // Envoyer les cookies avec la requête
+            credentials: "include",
         });
+        console.log('Response status:', response.status);
+        console.log('Response headers:', response.headers);
 
         if (!response.ok) {
             if (response.status != 401) {

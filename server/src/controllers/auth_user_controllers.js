@@ -28,16 +28,19 @@ exports.login_user = async (req, res) => {
         user.password = undefined;
 
         // Générez le token JWT en incluant les informations de l'utilisateur
-        const token = jwt.sign({ user: user }, process.env.SECRET_KEY);
-        // console.log("Generated token: ", token);
+        const token = jwt.sign({ user: user }, process.env.SECRET_KEY, { expiresIn: '1h' });
+
+        console.log("Generated token: ", token);
 
         // Définir le cookie dans la réponse avec le token
         res.cookie('token', token, {
             httpOnly: true,
             secure: true, // Assurez-vous que 'secure' est true en production
-            sameSite: 'none', // Ajustez selon les besoins, 'Strict', 'Lax' ou 'None'
-            domain: '127.0.0.1',
+            sameSite: 'None', // Ajustez selon les besoins, 'Strict', 'Lax' ou 'None'
+            domain: 'localhost',
         });
+
+        console.log("Cookie envoyé :", res.getHeaders()['set-cookie']);
 
         // Envoyer une réponse JSON indiquant que l'authentification a réussi
         res.status(200).json({
@@ -91,8 +94,13 @@ exports.logout_user = async (req, res) => {
 
 // Contrôleur pour obtenir les informations de l'utilisateur connecté
 exports.get_logged_in_user = async (req, res) => {
-    console.log('Cookies:', req.cookies);
-    const token = req.cookies.token;
+
+    console.log("get_logged_in_user");
+    
+    const token  = req.cookies.token;  // Récupérer le cookie 'token'
+    
+    console.log('Cookies:', req);
+
     console.log('Token from cookies:', token);
 
     if (!token) {
@@ -101,6 +109,8 @@ exports.get_logged_in_user = async (req, res) => {
 
     try {
         const decoded = jwt.verify(token, process.env.SECRET_KEY);
+        console.log('Decoded user data:', decoded);
+
         res.status(200).json({ user: decoded.user, token: token });
     } catch (error) {
         console.log('Token verification error:', error);
